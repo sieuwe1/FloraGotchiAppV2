@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>FloraGotchi POF</h2>
+
+
+
+<li>@ViewData["GameScore"]</li>
+<li>@ViewData["HumLv"]</li>
+<li>@ViewData["Temp"]</li>
+
+<button type="button" value="AddScore" onclick="location.href='@Url.Action("Page1", "Home" , new { parameter1=124 })'" />
+<br />
