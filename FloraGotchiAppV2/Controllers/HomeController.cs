@@ -37,6 +37,11 @@ namespace FloraGotchiAppV2.Controllers
             return View();
         }
 
+        public IActionResult Nav()
+        {
+            return View(); 
+        }
+
 
 
     }
