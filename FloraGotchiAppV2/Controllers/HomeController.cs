@@ -36,8 +36,7 @@ namespace FloraGotchiAppV2.Controllers
 
             return View();
         }
-
-
+     
 
     }
 }
