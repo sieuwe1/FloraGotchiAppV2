@@ -36,7 +36,23 @@ namespace FloraGotchiAppV2.Controllers
 
             return View();
         }
+
+        [HttpPost]
+
+        public IActionResult UpdateTemp(int temperatuur)
+        {
+
+            PlantContext p = new PlantContext("server = studmysql01.fhict.local; user id = dbi414674; password = Dse56VGQx3; port = 3306; database = dbi414674;");
+
+            p.AddTrackToPlaylist();
+
+            return RedirectToAction("Index");
+
+
+
+        }
      
+
 
     }
 }

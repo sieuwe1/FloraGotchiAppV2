@@ -10,6 +10,11 @@
 <li>@ViewData["GameScore"]</li>
 <li>@ViewData["HumLv"]</li>
 <li>@ViewData["Temp"]</li>
+<form asp-controller="Home" asp-action="UpdateTemp" method="post">
 
-<button type="button" value="AddScore" onclick="location.href='@Url.Action("Page1", "Home" , new { parameter1=124 })'" />
+    <input type="text" name="Temperatuur" />
+
+    <button type="submit" value="AddScore"  />
+
+</form>
 <br />
