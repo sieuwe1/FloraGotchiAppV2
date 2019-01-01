@@ -34,14 +34,14 @@ namespace FloraGotchiAppV2
             using (var con = MusicShareConnection)
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con) { CommandType = CommandType.StoredProcedure })
+                using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con))
                 {
                     cmd.Parameters.AddWithValue("@owner_id", userId);
                     using (var reader = cmd.ExecuteReader())
                     {
                         foreach (var row in reader)
                         {
-                            playlists.Add( new PlaylistDto
+                            playlists.Add(new PlaylistDto
                             {
                                 Name = reader.GetString(reader.GetOrdinal("name")),
                                 Id = reader.GetInt32(reader.GetOrdinal("id")),
@@ -56,54 +56,47 @@ namespace FloraGotchiAppV2
             return playlists;
         }
 
-        public PlaylistDto UpdateTemp(int plantId,int temperature)
+        public PlaylistDto GetPlantValues(int plant_id)
         {
-            try
+            using (var con = MusicShareConnection)
             {
-                using (var con = MusicShareConnection)
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con))
                 {
-                    con.Open();
-                    string 
-                    using (SqlCommand cmd = new SqlCommand("", con) { CommandType = CommandType.StoredProcedure })
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@playlist_name", name);
-                        cmd.Parameters.AddWithValue("@owner_id", ownerId);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
+                        cmd.Parameters.AddWithValue("@plant_id", plant_id);
+                        if (reader.Read()) {
+                            //read values
+                            return new PlaylistDto
                             {
-                                return new PlaylistDto
-                                {
-                                    Name = reader.GetString(reader.GetOrdinal("name")),
-                                    Id = reader.GetInt32(reader.GetOrdinal("id")),
-                                    CreationDate = reader.GetDateTime(reader.GetOrdinal("creation_date")),
-                                    OwnerId = reader.GetInt32(reader.GetOrdinal("official_owner_id"))
-                                };
-                            }
-                            throw new Exception("no response retrieved...");
-
+                                Name = reader.GetString(reader.GetOrdinal("name")),
+                                Id = reader.GetInt32(reader.GetOrdinal("id")),
+                                CreationDate = reader.GetDateTime(reader.GetOrdinal("creation_date")),
+                                OwnerId = reader.GetInt32(reader.GetOrdinal("official_owner_id"))
+                            };
                         }
+                        else{
+                            throw new Exception("reord not found");
+                        }
+                            
                     }
                 }
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
         }
 
-        public void AddTrackToPlaylist(int playlistId, int trackId)
+        public void UpdateTemp(int plantId,int teperatuur)
         {
             try
             {
                 using (var con = MusicShareConnection)
                 {
                     con.Open();
-                    using (SqlCommand cmd = new SqlCommand("spAddTrackToPlaylist", con) { CommandType = CommandType.StoredProcedure })
+                    string query = "UPDATE current_situation SET temperature = @teperatuur WHERE plant = @plant_id";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@playlist_id", playlistId);
-                        cmd.Parameters.AddWithValue("@track_id", trackId);
+                        cmd.Parameters.AddWithValue("@plant_id", plantId);
+                        cmd.Parameters.AddWithValue("@teperatuur", teperatuur);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -111,7 +104,7 @@ namespace FloraGotchiAppV2
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                //throw;
+                throw;
             }
         }
 
@@ -129,20 +122,6 @@ namespace FloraGotchiAppV2
             }
         }
 
-        public bool UserOwnsPlaylist(int playlistId, int ownerId)
-        {
-            using (var con = MusicShareConnection)
-            {
-                con.Open();
-                using (SqlCommand cmd = new SqlCommand("spUserOwnsPlaylist", con) { CommandType = CommandType.StoredProcedure })
-                {
-                    cmd.Parameters.AddWithValue("@playlist_id", playlistId);
-                    cmd.Parameters.AddWithValue("@user_id", ownerId);
-
-                    return (int)cmd.ExecuteScalar() == 1;
-                }
-            }
-        }
     }
 
 
