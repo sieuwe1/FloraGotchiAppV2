@@ -1,20 +1,70 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+ViewData["Title"] = "Index";
 }
 
-<h2>FloraGotchi POF</h2>
+
+<div class="container-fluid">
+    <h2>Overview</h2>
+    <hr style="border-top: 1px solid #858585"/>
 
 
 
-<li>@ViewData["GameScore"]</li>
-<li>@ViewData["HumLv"]</li>
-<li>@ViewData["Temp"]</li>
-<form asp-controller="Home" asp-action="UpdateTemp" method="post">
+    @*<li>@ViewData["GameScore"]</li>
+    <li>@ViewData["HumLv"]</li>*@
+    @*<li>@ViewData["Temp"]</li>*@
+    <div class="row card_wrapper">
+        <div class="col-xs-12  col-sm-12 col-md-5 card">
+            <div class=" col-md-4 card_data">
+                <ul>
+                    <li><img src="https://www.google.com/search?q=thermometer+icons&tbm=isch&source=iu&ictx=1&fir=C8Nlam0RBHQGzM%253A%252C4LjP6dpWIzzXOM%252C_&usg=AI4_-kQBjDzi13XSm-cF8lChpaE_N0lUDg&sa=X&ved=2ahUKEwj-sO672NzfAhWKmLQKHT71DVMQ9QEwAXoECAMQBA#imgrc=7d6wYeEtcczMXM:"></li>
+                    <li>@ViewData["Temp"]</li>
+                </ul>
+            </div>
+            <div class="col-md-6 card_info">
+                <h2> Temperature</h2>
+                <p> Lorem ipsum dolor sit, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="col-xs-12  col-sm-12 col-md-5 card_person">
+            <h2> Hello, Username</h2>
+            <p>
+                Here's an overview of Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            </p>
+        </div>        
+    </div>
+    <div class="row card_wrapper">
+        <div class="col-xs-12 col-sm-12 col-md-5 card">
+            <div class=" col-md-4 card_data">
+                <ul>
+                    <li><img src="https://www.google.com/search?q=thermometer+icons&tbm=isch&source=iu&ictx=1&fir=C8Nlam0RBHQGzM%253A%252C4LjP6dpWIzzXOM%252C_&usg=AI4_-kQBjDzi13XSm-cF8lChpaE_N0lUDg&sa=X&ved=2ahUKEwj-sO672NzfAhWKmLQKHT71DVMQ9QEwAXoECAMQBA#imgrc=7d6wYeEtcczMXM:"></li>
+                    <li>@ViewData["Score"]</li>
+                </ul>
+            </div>
+            <div class="col-md-6 card_info">
+                <h2> Score</h2>
+                <p> Lorem ipsum dolor sit, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 card">
+            <div class=" col-md-4 card_data">
+                <ul>
+                    <li><img src="https://www.google.com/search?q=thermometer+icons&tbm=isch&source=iu&ictx=1&fir=C8Nlam0RBHQGzM%253A%252C4LjP6dpWIzzXOM%252C_&usg=AI4_-kQBjDzi13XSm-cF8lChpaE_N0lUDg&sa=X&ved=2ahUKEwj-sO672NzfAhWKmLQKHT71DVMQ9QEwAXoECAMQBA#imgrc=7d6wYeEtcczMXM:"></li>
+                    <li>@ViewData["HumLv"]</li>
+                </ul>
+            </div>
+            <div class="col-md-6 card_info">
+                <h2> Humidity</h2>
+                <p> Lorem ipsum dolor sit, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+    <form asp-controller="Home" asp-action="UpdateTemp" method="post">
 
-    <input type="text" name="Temperatuur" />
+        <input type="text" name="Temperatuur" />
 
-    <button type="submit" value="AddScore"  />
+        <button type="submit" value="AddScore" />
 
-</form>
-<br />
+    </form>
+    <br />
+</div>

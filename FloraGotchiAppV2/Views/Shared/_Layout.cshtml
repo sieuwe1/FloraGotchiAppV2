@@ -14,39 +14,35 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <script type="text/javascript" src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 </head>
 
 
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"> FloraGotchi </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="col-xs-12 col-sm-2 col-md-1 nav_wrapper">
+    <nav>
+        <ul>
+            <li><a href="#" class="wide"><img src="~/images/homepng.png"/><span> Home </span></a></li>
+            <li><a href="#" class="wide">Light</a></li>
+            <li><a href="#" class="wide">humidity</a></li>
+            <li><a href="#" class="wide">Live stream</a></li>
+            <li><a href="#" class="wide">ITEM</a></li>
+            <li><a href="#" class="wide">Water</a></li>
+            <li><a href="#" class="wide">Library</a></li>
+        </ul>
     </nav>
+</div>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
-        @RenderBody()
+    <div class="col-xs-12 col-sm-9 col-md-10 container body-content">
+     
+        @RenderBody();
         <hr />
- 
+
     </div>
 
     <environment include="Development">
