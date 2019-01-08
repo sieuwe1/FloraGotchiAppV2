@@ -105,6 +105,10 @@ body {
     padding: 5px 0;
     width: 100px;
 }
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
     @media screen and (max-width: 767px) {
         /* Hide captions */
