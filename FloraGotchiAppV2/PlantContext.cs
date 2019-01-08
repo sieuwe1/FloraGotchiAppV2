@@ -9,6 +9,8 @@ namespace FloraGotchiAppV2
 {
     public class PlantContext
     {
+        private List<string> results;
+
         private readonly string _connectionString;
         public PlantContext(string connectionString)
         {
@@ -17,16 +19,15 @@ namespace FloraGotchiAppV2
 
 
         private SqlConnection MusicShareConnection => new SqlConnection(_connectionString);
+        
 
-        public class PlaylistDto
+        public List<string> Results
         {
-            public string Name { get; set; }
-            public int OwnerId { get; set; }
-            public DateTime CreationDate { get; set; }
-            public int Id { get; set; }
+            get { return results; }
+            set { results = value; }
         }
 
-
+        /*
 
         public IEnumerable<PlaylistDto> GetAccesiblePlaylistsForUser(int userId)
         {
@@ -56,27 +57,26 @@ namespace FloraGotchiAppV2
             return playlists;
         }
 
-        public PlaylistDto GetPlantValues(int plant_id)
+    */
+
+
+        public List<string> GetCurrentValues(int plant_id)
         {
             using (var con = MusicShareConnection)
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT Temperature FROM Current_situation WHERE Planter_ID = @plant_id"))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
                         cmd.Parameters.AddWithValue("@plant_id", plant_id);
                         if (reader.Read()) {
                             //read values
-                            return new PlaylistDto
-                            {
-                                Name = reader.GetString(reader.GetOrdinal("name")),
-                                Id = reader.GetInt32(reader.GetOrdinal("id")),
-                                CreationDate = reader.GetDateTime(reader.GetOrdinal("creation_date")),
-                                OwnerId = reader.GetInt32(reader.GetOrdinal("official_owner_id"))
-                            };
+                            results.Add(reader.GetString(reader.GetOrdinal("temperature")));
+                            return results;
                         }
-                        else{
+                        else
+                        {
                             throw new Exception("reord not found");
                         }
                             
@@ -85,6 +85,41 @@ namespace FloraGotchiAppV2
             }
         }
 
+
+
+        /*
+        public PlaylistDto GetCurrentValues(int plant_id)
+        {
+            using (var con = MusicShareConnection)
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT Temperature FROM Current_situation WHERE Planter_ID = @plant_id"))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        cmd.Parameters.AddWithValue("@plant_id", plant_id);
+                        if (reader.Read())
+                        {
+                            //read values
+                            return new PlaylistDto
+                            {
+                                //  Name = reader.GetString(reader.GetOrdinal("name")),
+                                Id = reader.GetInt32(reader.GetOrdinal("temperature")),
+                                // CreationDate = reader.GetDateTime(reader.GetOrdinal("creation_date")),
+                                //  OwnerId = reader.GetInt32(reader.GetOrdinal("official_owner_id"))
+                            };
+                        }
+                        else
+                        {
+                            throw new Exception("reord not found");
+                        }
+
+                    }
+                }
+            }
+        }
+
+
         public void UpdateTemp(int plantId,int teperatuur)
         {
             try
@@ -92,7 +127,7 @@ namespace FloraGotchiAppV2
                 using (var con = MusicShareConnection)
                 {
                     con.Open();
-                    string query = "UPDATE current_situation SET temperature = @teperatuur WHERE plant = @plant_id";
+                    string query = "UPDATE current_situation SET Temperature = @teperatuur WHERE Planter_ID = @plant_id";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@plant_id", plantId);
@@ -121,6 +156,7 @@ namespace FloraGotchiAppV2
                 }
             }
         }
+*/
 
     }
 
