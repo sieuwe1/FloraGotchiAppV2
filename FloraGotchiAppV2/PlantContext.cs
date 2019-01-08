@@ -73,7 +73,7 @@ namespace FloraGotchiAppV2
                         if (reader.Read()) {
                             //read values
                             results.Add(reader.GetString(reader.GetOrdinal("temperature")));
-                            return results;
+                            return Results;
                         }
                         else
                         {
@@ -82,6 +82,80 @@ namespace FloraGotchiAppV2
                             
                     }
                 }
+            }
+        }
+
+
+        public List<string> GetIdealValues(int plant_id)
+        {
+            using (var con = MusicShareConnection)
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT Temperature FROM Ideal_situation WHERE Planter_ID = @plant_id"))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        cmd.Parameters.AddWithValue("@plant_id", plant_id);
+                        if (reader.Read())
+                        {
+                            //read values
+                            results.Add(reader.GetString(reader.GetOrdinal("temperature")));
+                            return Results;
+                        }
+                        else
+                        {
+                            throw new Exception("reord not found");
+                        }
+
+                    }
+                }
+            }
+        }
+
+        public int GetGameScore()
+        {
+            using (var con = MusicShareConnection)
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(""))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            //read values
+                            return reader.GetInt32((reader.GetOrdinal("score")));
+                        }
+                        else
+                        {
+                            throw new Exception("reord not found");
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        public void UpdateGameScore(int GameScore)
+        {
+            try
+            {
+                using (var con = MusicShareConnection)
+                {
+                    con.Open();
+                    string query = "";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@plant_id", GameScore);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
 
