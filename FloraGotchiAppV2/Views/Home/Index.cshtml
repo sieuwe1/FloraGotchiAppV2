@@ -20,6 +20,13 @@ ViewData["Title"] = "Index";
                     <li><img src="https://www.google.com/search?q=thermometer+icons&tbm=isch&source=iu&ictx=1&fir=C8Nlam0RBHQGzM%253A%252C4LjP6dpWIzzXOM%252C_&usg=AI4_-kQBjDzi13XSm-cF8lChpaE_N0lUDg&sa=X&ved=2ahUKEwj-sO672NzfAhWKmLQKHT71DVMQ9QEwAXoECAMQBA#imgrc=7d6wYeEtcczMXM:"></li>
                     <li>@ViewData["Temp"]</li>
                 </ul>
+
+                <form asp-controller="Home" asp-action="UpdateTemp" method="post">
+
+                    <input type="number" name="Temperatuur" min="0" max="100" placeholder="Enter Temperature here"/>
+                    <button type="submit" value="Add Temp" />
+                </form>
+
             </div>
             <div class="col-md-6 card_info">
                 <h2> Temperature</h2>
@@ -48,10 +55,19 @@ ViewData["Title"] = "Index";
         </div>
         <div class="col-xs-12 col-sm-12 col-md-5 card">
             <div class=" col-md-4 card_data">
+
+
                 <ul>
                     <li><img src="https://www.google.com/search?q=thermometer+icons&tbm=isch&source=iu&ictx=1&fir=C8Nlam0RBHQGzM%253A%252C4LjP6dpWIzzXOM%252C_&usg=AI4_-kQBjDzi13XSm-cF8lChpaE_N0lUDg&sa=X&ved=2ahUKEwj-sO672NzfAhWKmLQKHT71DVMQ9QEwAXoECAMQBA#imgrc=7d6wYeEtcczMXM:"></li>
                     <li>@ViewData["HumLv"]</li>
+
                 </ul>
+                <form asp-controller="Home" asp-action="UpdateHumiity" method="post">
+
+                    <input type="text" name="Humidity" />
+                    <button type="submit" value="Add Temp" />
+                </form>
+
             </div>
             <div class="col-md-6 card_info">
                 <h2> Humidity</h2>
@@ -60,15 +76,9 @@ ViewData["Title"] = "Index";
         </div>
     </div>
 
-    <form asp-controller="Home" asp-action="UpdateTemp" method="post">
 
-        <input type="number" min="0" max="100" />
-    </form>
 
-    <form asp-controller="Home" asp-action="UpdateHumidity" method="post">
 
-        <input type="number" min="0" max="100" />
-    </form>
-    <button type="submit" value="AddScore" />
+
     <br />
 </div>
