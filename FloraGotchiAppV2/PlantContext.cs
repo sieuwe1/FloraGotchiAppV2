@@ -16,7 +16,7 @@ namespace FloraGotchiAppV2
         }
 
 
-        private SqlConnection DatabaseConnection => new SqlConnection(_connectionString);
+        private SqlConnection MusicShareConnection => new SqlConnection(_connectionString);
 
         public class PlaylistDto
         {
@@ -31,7 +31,7 @@ namespace FloraGotchiAppV2
         public IEnumerable<PlaylistDto> GetAccesiblePlaylistsForUser(int userId)
         {
             List<PlaylistDto> playlists = new List<PlaylistDto>();
-            using (var con = DatabaseConnection)
+            using (var con = MusicShareConnection)
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con))
@@ -58,7 +58,7 @@ namespace FloraGotchiAppV2
 
         public PlaylistDto GetPlantValues(int plant_id)
         {
-            using (var con = DatabaseConnection)
+            using (var con = MusicShareConnection)
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand("spGetOwnedPlaylistsForUser", con))
@@ -77,7 +77,7 @@ namespace FloraGotchiAppV2
                             };
                         }
                         else{
-                            throw new Exception("record not found");
+                            throw new Exception("reord not found");
                         }
                             
                     }
@@ -85,18 +85,18 @@ namespace FloraGotchiAppV2
             }
         }
 
-        public void UpdateTemp(int plantId,int temperatuur)
+        public void UpdateTemp(int plantId,int teperatuur)
         {
             try
             {
-                using (var con = DatabaseConnection)
+                using (var con = MusicShareConnection)
                 {
                     con.Open();
-                    string query = "UPDATE current_situation SET temperature = @temperatuur WHERE plant = @plant_id";
+                    string query = "UPDATE current_situation SET temperature = @teperatuur WHERE plant = @plant_id";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@plant_id", plantId);
-                        cmd.Parameters.AddWithValue("@temperatuur", temperatuur);
+                        cmd.Parameters.AddWithValue("@teperatuur", teperatuur);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -110,7 +110,7 @@ namespace FloraGotchiAppV2
 
         public bool Exists(int playlistId)
         {
-            using (var con = DatabaseConnection)
+            using (var con = MusicShareConnection)
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand("spPlaylistExists", con) { CommandType = CommandType.StoredProcedure })

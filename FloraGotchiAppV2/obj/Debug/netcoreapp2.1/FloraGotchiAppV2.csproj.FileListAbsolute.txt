@@ -82,33 +82,3 @@ C:\Users\sieuw\Documents\GitHub\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netc
 C:\Users\sieuw\Documents\GitHub\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.dll
 C:\Users\sieuw\Documents\GitHub\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.pdb
 C:\Users\sieuw\Documents\GitHub\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.csproj.CopyComplete
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.deps.json
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.runtimeconfig.json
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.runtimeconfig.dev.json
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.dll
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.pdb
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.Views.dll
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\bin\Debug\netcoreapp2.1\FloraGotchiAppV2.Views.pdb
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.csprojAssemblyReference.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.csproj.CoreCompileInputs.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.RazorAssemblyInfo.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.RazorAssemblyInfo.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.AssemblyInfoInputs.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.AssemblyInfo.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.TagHelpers.input.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.TagHelpers.output.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.RazorCoreGenerate.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Page1.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.RazorTargetAssemblyInfo.cache
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.RazorTargetAssemblyInfo.cs
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.Views.pdb
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.dll
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.pdb
-C:\Users\woute\stack\School\Fontys\1e Jaar\2e Periode\Proftaak\Github\FloraGotchiAppV2\FloraGotchiAppV2\obj\Debug\netcoreapp2.1\FloraGotchiAppV2.csproj.CopyComplete
