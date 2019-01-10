@@ -12320,23 +12320,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sieuw\\.nuget\\packages\\": {},
+    "C:\\Users\\maluv\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sieuw\\Documents\\GitHub\\FloraGotchiAppV2\\FloraGotchiAppV2\\FloraGotchiAppV2.csproj",
+      "projectUniqueName": "C:\\Users\\maluv\\OneDrive\\Documents\\FONTYS\\fontys\\proftaak\\app\\FloraGotchiAppV2\\FloraGotchiAppV2\\FloraGotchiAppV2.csproj",
       "projectName": "FloraGotchiAppV2",
-      "projectPath": "C:\\Users\\sieuw\\Documents\\GitHub\\FloraGotchiAppV2\\FloraGotchiAppV2\\FloraGotchiAppV2.csproj",
-      "packagesPath": "C:\\Users\\sieuw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sieuw\\Documents\\GitHub\\FloraGotchiAppV2\\FloraGotchiAppV2\\obj\\",
+      "projectPath": "C:\\Users\\maluv\\OneDrive\\Documents\\FONTYS\\fontys\\proftaak\\app\\FloraGotchiAppV2\\FloraGotchiAppV2\\FloraGotchiAppV2.csproj",
+      "packagesPath": "C:\\Users\\maluv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maluv\\OneDrive\\Documents\\FONTYS\\fontys\\proftaak\\app\\FloraGotchiAppV2\\FloraGotchiAppV2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sieuw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maluv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12344,7 +12344,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\sieuw\\Downloads\\serial-wiring-develop\\NuPkg": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
