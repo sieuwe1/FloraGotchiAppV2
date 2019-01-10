@@ -6,12 +6,12 @@ ViewData["Title"] = "Index";
 
 <div class="container-fluid">
     <h2>Overview</h2>
-    <hr style="border-top: 1px solid #858585"/>
+    <hr style="border-top: 1px solid #858585" />
 
 
 
     @*<li>@ViewData["GameScore"]</li>
-    <li>@ViewData["HumLv"]</li>*@
+        <li>@ViewData["HumLv"]</li>*@
     @*<li>@ViewData["Temp"]</li>*@
     <div class="row card_wrapper">
         <div class="col-xs-12  col-sm-12 col-md-5 card">
@@ -31,7 +31,7 @@ ViewData["Title"] = "Index";
             <p>
                 Here's an overview of Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
             </p>
-        </div>        
+        </div>
     </div>
     <div class="row card_wrapper">
         <div class="col-xs-12 col-sm-12 col-md-5 card">
@@ -59,12 +59,16 @@ ViewData["Title"] = "Index";
             </div>
         </div>
     </div>
+
     <form asp-controller="Home" asp-action="UpdateTemp" method="post">
 
-        <input type="text" name="Temperatuur" />
-
-        <button type="submit" value="AddScore" />
-
+        <input type="number" min="0" max="100" />
     </form>
+
+    <form asp-controller="Home" asp-action="UpdateHumidity" method="post">
+
+        <input type="number" min="0" max="100" />
+    </form>
+    <button type="submit" value="AddScore" />
     <br />
 </div>

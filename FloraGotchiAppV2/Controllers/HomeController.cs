@@ -51,8 +51,21 @@ namespace FloraGotchiAppV2.Controllers
 
 
         }
-     
 
+        [HttpPost]
+
+        public IActionResult UpdateHumiity(int temperatuur)
+        {
+
+            PlantContext p = new PlantContext("server=studmysql01.fhict.local;user id=dbi414674;password=Dse56VGQx3;database=dbi414674;");
+
+            p.UpdateTemp(1, temperatuur);
+
+            return RedirectToAction("Index");
+
+
+
+        }
 
     }
 }
